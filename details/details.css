@@ -1,0 +1,32 @@
+img {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: lightgrey;
+    height: 50vh;
+}
+
+.container {
+    display: flex;
+    /* align-items: center; */
+}
+
+body {
+    background-color: rgb(250, 250, 250);
+}
+
+ul {
+    font-size: 1.3em;
+    list-style: none;
+}
+
+.img-container{
+    position: relative;
+}
+
+button.btn-left-scroll {
+    position: absolute;
+    top: 50%;
+    /* left: auto; */
+    z-index: 2;
+}
