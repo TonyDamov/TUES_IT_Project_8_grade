@@ -36,7 +36,3 @@ nav ul li a {
   font-size: 1.3rem;
 }
 
-nav ul :last-child {
-  margin-left: auto;
-  padding-right: 1rem;
-}
