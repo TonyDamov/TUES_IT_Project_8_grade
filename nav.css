@@ -36,3 +36,7 @@ nav ul li a {
   font-size: 1.3rem;
 }
 
+.nav-align-right {
+  margin-left: auto;
+  padding-right: 2rem;
+}
