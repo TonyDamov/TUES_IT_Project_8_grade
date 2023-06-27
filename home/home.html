@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home_style.css">
+    
+    <script src="https://kit.fontawesome.com/697d6b85bb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="dropdown">
+          <a><i class="fa-solid fa-bars"></i> Menu</a>
+          <div class="dropdown-content">
+            <div class="dropdown-content-box">
+              <a href="../home/home.html"><i class="fa-solid fa-house"></i> Home</a>
+              <a href="../brands/brands.html"><i class="fa-solid fa-car-side"></i> Cars</a>
+              <a href="../aboutus/aboutus.html"><i class="fa-solid fa-address-card"></i> About Us</a>
+            </div>
+          </div>
+        </div>
+        <div class="site-name">ZHILKO MOTORSPORT</div>
+        <button class="user-button"><i class="fa-solid fa-user"></i> User</button>
+      </nav>
+      <main>
+        <h1>Newest In The Car World</h1>
+        <div class="image-box">
+          <a href="#" id="image-link">
+              <img id="image" src="" alt="Image">
+          </a>
+          <p class="image-text"></p>
+      </div>
+      </main>
+      <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const images = [
+                {
+                    url: 'https://cdn.motor1.com/images/mgl/qkZ72q/s4/singer-teaser.webp',
+                    link: 'https://www.motor1.com/news/673872/singer-tuned-porsche-911-teaser/',
+                    text: 'Singer Teases Porsche 911 With Huge Fender Flares, Massive Wing'
+                },
+                {
+                    url: 'https://cdn.motor1.com/images/mgl/BXQrQm/s4/bmw-m5-teaser.webp',
+                    link: 'https://www.motor1.com/news/673801/bmw-m5-touring-teaser-images/',
+                    text: 'BMW M5 Touring Teaser Shows Off Upcoming, High-Performance Wagon'
+                },
+                {
+                    url: 'https://cdn.motor1.com/images/mgl/8ApjO2/s4/tesla-cybertruck.webp',
+                    link: 'https://insideevs.com/news/673613/drone-fotage-shows-cybertruck-production/',
+                    text: 'Drone Footage Shows Tesla Cybertruck Production Well Underway'
+                },
+                {
+                    url: 'https://cdn.motor1.com/images/mgl/pb7lRv/s4/chevrolet-corvette-e-ray-photo-shoot.webp',
+                    link: 'https://www.motor1.com/news/673403/corvette-e-ray-behind-the-scenes-video-reveals-elaborate-photo-shoot/',
+                    text: 'Corvette E-Ray Behind-The-Scenes Video Reveals Elaborate Photo Shoot'
+                },
+                // Add more images, links, and texts as needed
+            ];
+
+            const imageElement = document.getElementById('image');
+            const linkElement = document.getElementById('image-link');
+            const textElement = document.querySelector('.image-text');
+
+            function rotateImages() {
+                const randomIndex = Math.floor(Math.random() * images.length);
+                const { url, link, text } = images[randomIndex];
+
+                if (imageElement && linkElement && textElement) {
+                    imageElement.src = url;
+                    linkElement.href = link;
+                    textElement.textContent = text;
+                }
+            }
+
+            rotateImages();
+
+            setInterval(rotateImages, 3000); // Rotate images every 3 seconds
+        });
+    </script>
+</body>
+</html>
